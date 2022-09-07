@@ -1,6 +1,6 @@
 @mixin fotter {
   .fotter {
-    height: 75%;
+    height: 50%;
     width: 100%;
     background-color: #0a0119;
     color: white;
@@ -43,6 +43,23 @@
         color: white;
         margin-top: 20px;
       }
+    }
+  }
+}
+.fotterdown {
+  height: 100px;
+  width: 100%;
+  background-color: #0a0119;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h6 {
+    color: white;
+    font-weight: 100;
+    font-size: 17px;
+    > span {
+      color: #1234cd;
     }
   }
 }

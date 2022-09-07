@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.fotterdown {
+  height: 100px;
+  width: 100%;
+  background-color: #0a0119;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fotterdown h6 {
+  color: white;
+  font-weight: 100;
+  font-size: 17px;
+}
+.fotterdown h6 > span {
+  color: #1234cd;
+}
+
 * {
   padding: 0%;
   margin: 0%;
@@ -34,19 +51,19 @@ body .full .all-item {
   cursor: pointer;
   margin-top: 30px;
 }
-body .full .all-item .item {
+body .full .all-item > .item {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: block;
 }
-body .full .all-item .item:hover::after {
+body .full .all-item > .item:hover::after {
   height: 4px;
   width: 100%;
   background-color: rgb(11, 172, 236);
   border: auto;
 }
-body .full .all-item .item::after {
+body .full .all-item > .item::after {
   content: "";
   display: block;
   margin-top: 10px;
@@ -321,7 +338,7 @@ body .section5 > .content > h5 {
   cursor: pointer;
 }
 body .fotter {
-  height: 75%;
+  height: 50%;
   width: 100%;
   background-color: #0a0119;
   color: white;
@@ -368,9 +385,6 @@ body .grid {
   gap: 10px;
   background-color: #100028;
 }
-body .item {
-  background-color: antiquewhite;
-}
 body .item1 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -404,7 +418,7 @@ body .item2 > a {
   height: 23px;
   width: 1000px;
   width: 20px;
-  border: 3px solid rgba(255, 255, 255, 0.841);
+  border: 3px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   color: white;
 }
