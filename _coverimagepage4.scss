@@ -1,0 +1,74 @@
+@mixin coverpage4 {
+    .section4 {
+            height: 100%;
+            width: 100%;
+            background-color: #100028;
+            flex-wrap: wrap;
+    
+            .topic {
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+    
+                >h6 {
+                    margin-top: 50px;
+                }
+            }
+    
+            .sub1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                color: white;
+                margin-top: 70px;
+    
+    
+    
+    
+            }
+    
+            .update {
+                height: 250px;
+                width: 250px;
+                // background-color: red;
+                border: 1px solid rgba(128, 128, 128, 0.564);
+                margin-right: 25px;
+                padding: 20px;
+    
+                >p {
+                    margin-top: 25px;
+                    font-weight: 180;
+                }
+    
+                >h5 {
+                    margin-top: 25px;
+                }
+    
+    
+            }
+    
+            .update:nth-last-of-type(2) {
+                // background-color: aqua;
+    
+                >p {
+                    margin-top: 25px;
+                    font-weight: 180;
+                    // font-size: 13px;
+                }
+    
+            }
+    
+            .update:nth-last-of-type(3) {
+    
+                // background-color: brown;
+                >p {
+                    margin-top: 25px;
+                    font-weight: 180;
+                }
+            }
+        }
+    
+}

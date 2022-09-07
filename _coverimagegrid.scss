@@ -1,0 +1,147 @@
+@mixin coverimagegrid {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 10px;
+    background-color: #100028;
+  }
+
+  .item {
+    background-color: antiquewhite;
+  }
+
+  .item1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url("https://preview.colorlib.com/theme/videograph/img/work/work-1.jpg.webp");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > a {
+      padding: 12px;
+      position: absolute;
+      height: 23px;
+      width: 1000px;
+      width: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.841);
+      border-radius: 50%;
+      color: white;
+    }
+  }
+
+  .item2 {
+    background-image: url("https://preview.colorlib.com/theme/videograph/img/work/work-2.jpg.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > a {
+      padding: 12px;
+      position: absolute;
+      height: 23px;
+      width: 1000px;
+      width: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.841);
+      border-radius: 50%;
+      color: white;
+    }
+  }
+  .item3 {
+    background-image: url("https://preview.colorlib.com/theme/videograph/img/work/work-3.jpg.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > a {
+      padding: 12px;
+      position: absolute;
+      height: 23px;
+      width: 1000px;
+      width: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.841);
+      border-radius: 50%;
+      color: white;
+    }
+  }
+
+  .item4 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url("https://preview.colorlib.com/theme/videograph/img/work/work-4.jpg.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > a {
+      padding: 12px;
+      position: absolute;
+      height: 23px;
+      width: 1000px;
+      width: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.841);
+      border-radius: 50%;
+      color: white;
+    }
+  }
+
+  .item5 {
+    background-image: url("https://preview.colorlib.com/theme/videograph/img/work/work-5.jpg.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > a {
+      padding: 12px;
+
+      position: absolute;
+      height: 23px;
+      width: 1000px;
+      width: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.841);
+      border-radius: 50%;
+      color: white;
+    }
+  }
+
+  .item6 {
+    background-image: url("https://preview.colorlib.com/theme/videograph/img/work/work-6.jpg.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > a {
+      padding: 12px;
+      position: absolute;
+      height: 23px;
+      width: 1000px;
+      width: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.841);
+      border-radius: 50%;
+      color: white;
+    }
+  }
+  .item7 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-image: url("https://preview.colorlib.com/theme/videograph/img/work/work-7.jpg.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > a {
+      padding: 12px;
+      position: absolute;
+      height: 23px;
+      width: 1000px;
+      width: 20px;
+      border: 3px solid rgba(255, 255, 255, 0.841);
+      border-radius: 50%;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@mixin coverpage5 {
+  .section5 {
+    height: 480px;
+
+    width: 100%;
+    background-repeat: no-repeat;
+    // background-size: cover;
+    display: flex;
+    background-image: url("https://preview.colorlib.com/theme/videograph/img/callto-bg.jpg.webp");
+
+    // justify-content: center;
+    > .content {
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      flex-direction: column;
+      margin-left: 20px;
+      color: white;
+      // width: 400px;
+      margin-left: 250px;
+
+      > h1 {
+        font-size: 35px;
+      }
+
+      > h5 {
+        margin-top: 50px;
+        background-color: #00bfe7;
+        width: fit-content;
+        padding: 10px;
+        // word-spacing: 8px;
+        letter-spacing: 1px;
+
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+      }
+    }
+  }
+}

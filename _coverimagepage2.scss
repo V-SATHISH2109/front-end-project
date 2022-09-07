@@ -1,0 +1,81 @@
+@import "./mixinis";
+
+@mixin Section1 {
+  .section1 {
+    @include box(600px, 100%, #100028, null);
+    @include Flex();
+    box-sizing: border-box;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .sathish {
+      @include box(500px, 340px, null, null);
+      // @include Flex(null,null,column,null);
+      color: white;
+      padding: 50px;
+      margin-top: 50px;
+      // > img {
+      //   background-color: rebeccapurple;
+      //   padding: 10px;
+      //   border: 2px solid rgb(11, 172, 236);
+      //   transform: rotate(50deg);
+      //   &:hover {
+      //     transform: rotate(50deg);
+      //   }
+      // }
+      .sathish:nth-of-type(1) {
+        flex-direction: column;
+
+        .sefont1 {
+          font-size: 20px;
+        }
+
+        .sefont2 {
+          font-size: 30px;
+        }
+      }
+
+      .sefont3 {
+        margin-top: 50px;
+        font-size: 15px;
+        font-weight: 180;
+      }
+
+      .sefont4 {
+        margin-top: 10px;
+        font-size: 20px;
+      }
+    }
+
+    .sathish:nth-of-type(2) {
+      flex-direction: column;
+
+      .sefont1 {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .sefont4 {
+        font-size: 15px;
+        margin-bottom: 20px;
+        font-weight: 180;
+      }
+    }
+
+    .sathish:nth-of-type(3) {
+      flex-direction: column;
+
+      .sefont1 {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .sefont4 {
+        font-size: 15px;
+        margin-bottom: 20px;
+        font-weight: 180;
+      }
+    }
+  }
+}

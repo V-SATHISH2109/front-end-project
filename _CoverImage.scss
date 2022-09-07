@@ -1,0 +1,91 @@
+@import "./mixinis";
+
+@mixin Full {
+  .full {
+    background-image: url(https://preview.colorlib.com/theme/videograph/img/hero/hero-1.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    margin: 0%;
+    height: 684px;
+    display: block;
+    .naveimg {
+      @include Flex(center, center, row);
+    }
+    .all-item {
+      @include Flex(center, row, wrap);
+      margin: auto;
+      gap: 60px;
+      color: white;
+      list-style: none;
+      cursor: pointer;
+      margin-top: 30px;
+
+      .item {
+        width: fit-content;
+        display: block;
+        // background-color: aqua;
+
+        &:hover::after {
+          @include box(4px, 100%, rgb(11, 172, 236));
+        }
+        &::after {
+          content: "";
+          display: block;
+          margin-top: 10px;
+          transition: 1s;
+          @include box(4px, 100%);
+        }
+      }
+    }
+
+    .black {
+      @include Flex(flex-end, center, center);
+      @include box(50px, 75%, #4c4c4c);
+      margin: auto;
+      margin-top: 20px;
+      color: rgb(227, 220, 220);
+
+      .menu {
+        @include Flex(center, center);
+        @include box(40px, 75px, #222222);
+        margin-right: 40px;
+        cursor: pointer;
+      }
+    }
+    .hide {
+      display: none;
+      &:hover {
+        display: block;
+      }
+    }
+
+    .content {
+      color: white;
+      margin-left: 200px;
+      margin-top: 90px;
+      .font1 {
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin: 20px 0px;
+        display: inline;
+        border: 3px solid rgb(11, 172, 236);
+
+        padding: 10px;
+      }
+      // .font1::before{
+      //   content: '';
+      //   position: absolute;
+      //   background: none;
+      //   transform: translate(-15px,-15px);
+      // }
+      .font2 {
+        font-size: 50px;
+        width: 50px;
+
+        letter-spacing: 1px;
+        margin: 10px 0px;
+      }
+    }
+  }
+}
