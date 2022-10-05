@@ -2,79 +2,208 @@
 
 @mixin Section1 {
   .section1 {
-    @include box(600px, 100%, #100028, null);
-    @include Flex();
+    @include box(auto, 100%, #100028);
     box-sizing: border-box;
-    padding: 20px;
-    flex-direction: row;
-    justify-content: space-evenly;
+    padding: 10% 0%;
 
-    .sathish {
-      @include box(500px, 340px, null, null);
-      // @include Flex(null,null,column,null);
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: repeat(2);
+      gap: 10px;
+      overflow: hidden;
+      margin: 0px auto;
       color: white;
-      padding: 50px;
-      margin-top: 50px;
-      // > img {
-      //   background-color: rebeccapurple;
-      //   padding: 10px;
-      //   border: 2px solid rgb(11, 172, 236);
-      //   transform: rotate(50deg);
-      //   &:hover {
-      //     transform: rotate(50deg);
-      //   }
-      // }
-      .sathish:nth-of-type(1) {
-        flex-direction: column;
+      max-width: 1200px;
+      @include breakpoint(1000px) {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        gap: 10px;
+        margin-left: 0%;
+        // height: 1000px;
+      }
 
-        .sefont1 {
+      > .content1 {
+        margin: 10px;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        position: relative;
+
+        @include breakpoint(1000px) {
+          grid-row-start: auto;
+          grid-row-end: auto;
+        }
+
+        > p {
+          margin-top: 10px;
+          font-size: 17px;
+          font-weight: 200;
+          line-height: 25px;
+        }
+        .sefont2 {
+          margin-top: 40px;
+        }
+
+        .sefont4 {
+          margin-top: 50px;
+          position: relative;
+          width: 155px;
+          font-size: 15px;
+          padding: 20px;
+          cursor: pointer;
+          &:hover::before,
+          &:hover::after {
+            height: 100%;
+            width: 100%;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+            height: 50%;
+            width: 10%;
+            box-sizing: border-box;
+            border-right: 3px solid #00bfe7;
+            border-bottom: 3px solid #00bfe7;
+            transition: all 1s;
+            display: inline;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0%;
+            height: 50%;
+            width: 10%;
+            box-sizing: border-box;
+            top: 0%;
+            border-top: 3px solid #00bfe7;
+            border-left: 3px solid #00bfe7;
+            transition: all 1s;
+          }
+        }
+      }
+      > .content2 {
+        margin: 10px;
+        // background-color: rebeccapurple;
+        position: relative;
+        > img {
+          margin-top: 15px;
+          margin-left: 15px;
+        }
+        > .animation {
+          height: 60px;
+          width: 60px;
+          word-wrap: 100px;
+          position: absolute;
+          border: 3px solid #00bfe7;
+          // rotate: 50deg;
+          &:hover {
+            rotate: 50deg;
+            transition: all 1s;
+          }
+        }
+
+        > h5 {
+          margin-top: 40px;
           font-size: 20px;
         }
-
-        .sefont2 {
-          font-size: 30px;
+        > p {
+          margin-top: 10px;
+          font-size: 17px;
+          font-weight: 200;
+          line-height: 25px;
         }
       }
-
-      .sefont3 {
-        margin-top: 50px;
-        font-size: 15px;
-        font-weight: 180;
+      > .content3 {
+        margin: 10px;
+        // background-color: rebeccapurple;
+        > img {
+          margin-top: 15px;
+          margin-left: 15px;
+        }
+        > .animation {
+          height: 60px;
+          width: 60px;
+          word-wrap: 100px;
+          position: absolute;
+          border: 3px solid #00bfe7;
+          // rotate: 50deg;
+          &:hover {
+            rotate: 50deg;
+            transition: all 1s;
+          }
+        }
+        > h5 {
+          margin-top: 40px;
+          font-size: 20px;
+        }
+        > p {
+          margin-top: 10px;
+          font-size: 17px;
+          font-weight: 200;
+          line-height: 25px;
+        }
       }
-
-      .sefont4 {
-        margin-top: 10px;
-        font-size: 20px;
+      > .content4 {
+        margin: 10px;
+        // background-color: rebeccapurple;
+        > img {
+          margin-top: 15px;
+          margin-left: 15px;
+        }
+        > .animation {
+          height: 60px;
+          width: 60px;
+          word-wrap: 100px;
+          position: absolute;
+          border: 3px solid #00bfe7;
+          // rotate: 50deg;
+          &:hover {
+            rotate: 50deg;
+            transition: all 1s;
+          }
+        }
+        > h5 {
+          margin-top: 40px;
+          font-size: 20px;
+        }
+        > p {
+          margin-top: 10px;
+          font-size: 17px;
+          font-weight: 200;
+          line-height: 25px;
+        }
       }
-    }
-
-    .sathish:nth-of-type(2) {
-      flex-direction: column;
-
-      .sefont1 {
-        margin-top: 20px;
-        font-size: 20px;
-      }
-
-      .sefont4 {
-        font-size: 15px;
-        margin-bottom: 20px;
-        font-weight: 180;
-      }
-    }
-
-    .sathish:nth-of-type(3) {
-      flex-direction: column;
-
-      .sefont1 {
-        margin-top: 20px;
-        font-size: 20px;
-      }
-
-      .sefont4 {
-        font-size: 15px;
-        margin-bottom: 20px;
-        font-weight: 180;
+      > .content5 {
+        margin: 10px;
+        // background-color: rebeccapurple;
+        > img {
+          margin-top: 15px;
+          margin-left: 15px;
+        }
+        > .animation {
+          height: 60px;
+          width: 60px;
+          word-wrap: 100px;
+          position: absolute;
+          border: 3px solid #00bfe7;
+          // rotate: 50deg;
+          &:hover {
+            rotate: 50deg;
+            transition: all 1s;
+          }
+        }
+        > h5 {
+          margin-top: 40px;
+          font-size: 20px;
+        }
+        > p {
+          margin-top: 10px;
+          font-size: 17px;
+          font-weight: 200;
+          line-height: 25px;
+        }
       }
     }
   }

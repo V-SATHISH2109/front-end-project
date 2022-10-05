@@ -11,19 +11,14 @@
   flex-wrap: $flexWrap;
 }
 
-@mixin box (
-    $height:0px,
-    $width:0px,
-    $bgcolor:transparent,
-    $border:auto,
-    
-){
-    height: $height;
-    width: $width;
-    background-color: $bgcolor;
-    border: $border;  
+@mixin box($height: 0px, $width: 0px, $bgcolor: transparent, $border: auto) {
+  height: $height;
+  width: $width;
+  background-color: $bgcolor;
+  border: $border;
 }
-// @mixin breakpoint($size) {
-//   @media(max-width:$size);
-  
-// } 
+@mixin breakpoint($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}

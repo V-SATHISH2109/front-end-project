@@ -1,74 +1,100 @@
+@import "./mixinis";
 @mixin coverpage4 {
-    .section4 {
-            height: 100%;
-            width: 100%;
-            background-color: #100028;
-            flex-wrap: wrap;
-    
-            .topic {
-                color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                flex-wrap: wrap;
-    
-                >h6 {
-                    margin-top: 50px;
-                }
-            }
-    
-            .sub1 {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                color: white;
-                margin-top: 70px;
-    
-    
-    
-    
-            }
-    
-            .update {
-                height: 250px;
-                width: 250px;
-                // background-color: red;
-                border: 1px solid rgba(128, 128, 128, 0.564);
-                margin-right: 25px;
-                padding: 20px;
-    
-                >p {
-                    margin-top: 25px;
-                    font-weight: 180;
-                }
-    
-                >h5 {
-                    margin-top: 25px;
-                }
-    
-    
-            }
-    
-            .update:nth-last-of-type(2) {
-                // background-color: aqua;
-    
-                >p {
-                    margin-top: 25px;
-                    font-weight: 180;
-                    // font-size: 13px;
-                }
-    
-            }
-    
-            .update:nth-last-of-type(3) {
-    
-                // background-color: brown;
-                >p {
-                    margin-top: 25px;
-                    font-weight: 180;
-                }
-            }
+  .section4 {
+    @include box(auto, 100%, #100028);
+    padding: 10% 0%;
+    // display: flex;
+    // justify-content: center;
+    // margin: 0%;
+    .topic {
+      @include Flex(center, center, column, wrap);
+      color: white;
+      .title2 {
+        margin-top: 20px;
+        position: relative;
+        padding-bottom: 20px;
+        &::after {
+          content: "";
+          position: absolute;
+          right: 25%;
+          bottom: 0%;
+          height: 0%;
+          width: 50%;
+          // box-sizing: border-box;
+          // border-right: 50px solid #00bfe7;
+          // border-left: 10px solid #00bfe7;
+          border-bottom: 5px solid #00bfe7;
+          // transition: all 1s;
+          padding-top: 100px;
         }
-    
+      }
+    }
+
+    .sub1 {
+      @include Flex(center, null, row, wrap);
+      color: white;
+      margin-top: 70px;
+    }
+
+    .update {
+      @include box(340px, 320px, null, 1px solid rgba(128, 128, 128, 0.564));
+      margin-right: 25px;
+      padding: 40px;
+      box-sizing: border-box;
+      // width: 320px;
+      // background-image: url("https://i.pinimg.com/736x/06/79/02/067902820dbe939f688275dc169e8445.jpg");
+      background-size: cover;
+
+      &:hover {
+        background-image: url("https://i.pinimg.com/736x/06/79/02/067902820dbe939f688275dc169e8445.jpg");
+        filter: brightness(50%);
+      }
+      @include breakpoint(1160px) {
+        @include box(380px, 270px, null, 1px solid rgba(128, 128, 128, 0.564));
+      }
+      @include breakpoint(1000px) {
+        @include box(270px, 500px, null, 1px solid rgba(128, 128, 128, 0.564));
+        // background-size: cover;
+      }
+      > h3 {
+        font-size: 22px;
+      }
+
+      > p {
+        margin-top: 25px;
+        font-weight: 180;
+        line-height: 30px;
+      }
+
+      > h5 {
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        > i {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .update:nth-last-of-type(2) {
+      > p {
+        margin-top: 25px;
+        font-weight: 180;
+      }
+      @include breakpoint(1000px) {
+        @include box(350px, 300px, null, 1px solid rgba(128, 128, 128, 0.564));
+        display: none;
+      }
+    }
+
+    .update:nth-last-of-type(3) {
+      > p {
+        margin-top: 25px;
+        font-weight: 180;
+      }
+      @include breakpoint(1000px) {
+        display: none;
+      }
+    }
+  }
 }

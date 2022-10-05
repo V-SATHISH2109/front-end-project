@@ -1,90 +1,158 @@
 @import "./mixinis";
 
 @mixin Full {
-  .full {
+  .cover-image {
     background-image: url(https://preview.colorlib.com/theme/videograph/img/hero/hero-1.jpg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     margin: 0%;
     height: 684px;
-    display: block;
-    .naveimg {
-      @include Flex(center, center, row);
-    }
-    .all-item {
-      @include Flex(center, row, wrap);
-      margin: auto;
-      gap: 60px;
-      color: white;
-      list-style: none;
-      cursor: pointer;
-      margin-top: 30px;
-
-      > .item {
-        width: fit-content;
-        display: block;
-        // background-color: aqua;
-
-        &:hover::after {
-          @include box(4px, 100%, rgb(11, 172, 236));
+    display: flex;
+    justify-content: center;
+    .maxwidth-wrapper {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0px 40px;
+      .navbar {
+        width: 100%;
+        margin: auto;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        @include Flex(space-between, center, row);
+        > img {
+          width: 140px;
         }
-        &::after {
-          content: "";
+        .center-route {
+          display: flex;
+          gap: 30px;
+          color: aliceblue;
+          font-size: 13px;
+          @include breakpoint(1000px) {
+            display: none;
+          }
+          .item {
+            cursor: pointer;
+            // background-color: rebeccapurple;
+            position: relative;
+            // padding-bottom: 10px;
+
+            &:hover::after {
+              width: 100%;
+              visibility: visible;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              right: 0%;
+              left: 0%;
+              bottom: 0%;
+              height: 0%;
+              width: 0%;
+              box-sizing: border-box;
+              border-right: 3px solid #00bfe7;
+              border-bottom: 3px solid #00bfe7;
+              // transition: all 0.5s;
+              visibility: hidden;
+            }
+          }
+        }
+        .right-route {
+          display: flex;
+          gap: 30px;
+          color: whitesmoke;
+          @include breakpoint(1000px) {
+            display: none;
+          }
+        }
+      }
+      .black {
+        @include Flex(flex-end, center, center);
+        @include box(50px, 80%, #4c4c4c);
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        color: rgb(227, 220, 220);
+        .menu {
+          @include Flex(center, center);
+          @include box(40px, 90px, #222222);
+          margin-right: 10px;
+          cursor: pointer;
+
+          > i {
+            margin-left: 5px;
+          }
+        }
+      }
+      .hide {
+        display: none;
+        &:hover {
           display: block;
-          margin-top: 10px;
-          transition: 1s;
-          @include box(4px, 100%);
         }
       }
-    }
-
-    .black {
-      @include Flex(flex-end, center, center);
-      @include box(50px, 75%, #4c4c4c);
-      margin: auto;
-      margin-top: 20px;
-      color: rgb(227, 220, 220);
-
-      .menu {
-        @include Flex(center, center);
-        @include box(40px, 75px, #222222);
-        margin-right: 40px;
-        cursor: pointer;
-      }
-    }
-    .hide {
-      display: none;
-      &:hover {
-        display: block;
-      }
-    }
-
-    .content {
-      color: white;
-      margin-left: 200px;
-      margin-top: 90px;
-      .font1 {
-        font-size: 20px;
-        letter-spacing: 1px;
-        margin: 20px 0px;
-        display: inline;
-        border: 3px solid rgb(11, 172, 236);
-
-        padding: 10px;
-      }
-      // .font1::before{
-      //   content: '';
-      //   position: absolute;
-      //   background: none;
-      //   transform: translate(-15px,-15px);
-      // }
-      .font2 {
-        font-size: 50px;
-        width: 50px;
-
-        letter-spacing: 1px;
-        margin: 10px 0px;
+      .content {
+        color: white;
+        margin-top: 90px;
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 15px;
+          font-weight: bold;
+          height: 50px;
+          width: 240px;
+          letter-spacing: 1px;
+          margin: 20px 0px;
+          padding: 0%;
+          cursor: pointer;
+          position: relative;
+          &:hover::before,
+          &:hover::after {
+            height: 100%;
+            width: 100%;
+          }
+          @include breakpoint(940px) {
+            font-size: 15px;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+            height: 50%;
+            width: 10%;
+            box-sizing: border-box;
+            border-right: 3px solid #00bfe7;
+            border-bottom: 3px solid #00bfe7;
+            transition: all 1s;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0%;
+            height: 50%;
+            width: 10%;
+            box-sizing: border-box;
+            top: 0%;
+            border-top: 3px solid #00bfe7;
+            border-left: 3px solid #00bfe7;
+            transition: all 1s;
+          }
+        }
+        .font2 {
+          font-size: 50px;
+          width: 50px;
+          letter-spacing: 1px;
+          margin: 10px 0px;
+          @include breakpoint(695px) {
+            font-size: 40px;
+            margin-top: 30px;
+          }
+          @include breakpoint(496px) {
+            font-size: 30px;
+            margin-top: 30px;
+          }
+        }
       }
     }
   }

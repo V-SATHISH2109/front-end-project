@@ -1,16 +1,12 @@
+@import "./mixinis";
 @mixin fotter {
   .fotter {
-    height: 50%;
-    width: 100%;
-    background-color: #0a0119;
+    @include box(auto, 100%, #0a0119);
     color: white;
-    // display: flex;
-    // display: flex;
 
     > .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
+      @include Flex(space-around, center, null, wrap);
+
       > img {
         margin-top: 40px;
       }
@@ -22,17 +18,41 @@
     }
     .contant {
       display: grid;
-
-      grid-template-columns: 235px 100px 100px 250px;
+      grid-template-columns: 350px 90px 120px 200px;
       margin-top: 100px;
       justify-content: center;
       gap: 100px;
+      margin: 0px, auto;
+      overflow: hidden;
+
+      @include breakpoint(1000px) {
+        grid-template-columns: 200px 100px 100px 250px;
+        gap: 50px;
+      }
+      @include breakpoint(950px) {
+        grid-template-columns: 200px 100px 100px;
+        gap: 50px;
+      }
+      @include breakpoint(550px) {
+        grid-template-columns: 200px;
+        gap: 50px;
+        margin-right: 50px;
+        justify-content: flex-start;
+        margin-left: 20px;
+      }
+
       .words {
-        font-size: 12px;
+        font-size: 17px;
         font-weight: 100;
         line-height: 20px;
         word-spacing: 2px;
         margin-top: 10px;
+        @include breakpoint(550px) {
+          width: 400px;
+        }
+      }
+      .words1 {
+        width: 400px;
       }
       input[type="text"] {
         background-color: transparent;
@@ -42,18 +62,17 @@
         width: 200px;
         color: white;
         margin-top: 20px;
+        @include breakpoint(950px) {
+          width: 400px;
+          height: 50px;
+        }
       }
     }
   }
 }
 .fotterdown {
-  height: 100px;
-  width: 100%;
-  background-color: #0a0119;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  @include Flex(center, center, null, wrap);
+  @include box(100px, 100%, #0a0119);
   h6 {
     color: white;
     font-weight: 100;
